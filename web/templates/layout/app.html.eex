@@ -9,6 +9,7 @@
 
     <title>Hello PhoenixVideoStream!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="http://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
   </head>
 
   <body>
@@ -31,5 +32,6 @@
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="http://vjs.zencdn.net/7.2.3/video.js"></script>
   </body>
 </html>
