@@ -23,7 +23,7 @@ defmodule PhoenixVideoStream.Util do
     end
   end
 
-  def get_file_size(video_path) do
+  def get_file_size(path) do
     {:ok, %{size: size}} = File.stat path
     size
   end
