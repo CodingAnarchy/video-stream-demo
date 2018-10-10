@@ -22,7 +22,7 @@ exports.config = {
     stylesheets: {
       joinTo: "css/app.css",
       order: {
-        after: ["web/static/css/app.css"] // concat app.css last
+        after: ["css/app.css"] // concat app.css last
       }
     },
     templates: {
@@ -54,9 +54,7 @@ exports.config = {
     },
     sass: {
       options: {
-        includePaths: [
-          'node-modules/foundation-sites/scss'
-        ]
+        includePaths: ['node_modules/foundation-sites/scss']
       }
     }
   },
@@ -68,10 +66,10 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
     globals: {
       $: 'jquery',
-      jQuery: 'jquery',
+      jQuery: 'jquery'
     }
   }
 };
