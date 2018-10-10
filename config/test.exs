@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :phoenix_video_stream, PhoenixVideoStream.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "phoenix_video_stream_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+  
+config :phoenix_video_stream, :uploads_dir, "/tmp/uploads/"

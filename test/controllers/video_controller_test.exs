@@ -2,7 +2,7 @@ defmodule PhoenixVideoStream.VideoControllerTest do
   use PhoenixVideoStream.ConnCase
 
   alias PhoenixVideoStream.Video
-  @valid_attrs %{content_type: "some content_type", filename: "some filename", path: "some path", title: "some title"}
+  @valid_attrs %{title: "Test Video", video_file: %Plug.Upload{path: "test/fixtures/test.mp4", filename: "test.mp4"}}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do
@@ -17,8 +17,8 @@ defmodule PhoenixVideoStream.VideoControllerTest do
 
   test "creates resource and redirects when data is valid", %{conn: conn} do
     conn = post conn, video_path(conn, :create), video: @valid_attrs
-    video = Repo.get_by!(Video, @valid_attrs)
-    assert redirected_to(conn) == video_path(conn, :show, video.id)
+    assert Repo.get_by!(Video, %{title: "Test Video"})
+    assert redirected_to(conn) == video_path(conn, :index)
   end
 
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
@@ -48,7 +48,7 @@ defmodule PhoenixVideoStream.VideoControllerTest do
     video = Repo.insert! %Video{}
     conn = put conn, video_path(conn, :update, video), video: @valid_attrs
     assert redirected_to(conn) == video_path(conn, :show, video)
-    assert Repo.get_by(Video, @valid_attrs)
+    assert Repo.get_by(Video, %{title: "Test Video"})
   end
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do

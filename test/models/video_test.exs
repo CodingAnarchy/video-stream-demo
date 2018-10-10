@@ -3,7 +3,7 @@ defmodule PhoenixVideoStream.VideoTest do
 
   alias PhoenixVideoStream.Video
 
-  @valid_attrs %{content_type: "some content_type", filename: "some filename", path: "some path", title: "some title"}
+  @valid_attrs %{title: "Test Video", video_file: %Plug.Upload{path: "test/fixtures/test.mp4", filename: "test.mp4"}}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
