@@ -21,6 +21,12 @@ defmodule PhoenixVideoStream.Router do
     get "/watch/:id", WatchController, :show
   end
 
+  scope "/auth", PhoenixVideoStream do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixVideoStream do
   #   pipe_through :api
