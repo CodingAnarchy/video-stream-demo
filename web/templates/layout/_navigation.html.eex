@@ -1,0 +1,24 @@
+<div class="title-bar" data-responsive-toggle="my-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="my-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+<div class="top-bar" id="my-menu">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">FlixTube</li>
+    </ul>
+  </div>
+<div class="top-bar-right">
+    <ul class="menu">
+      <li>
+        <a href="#">Videos</a>
+      </li>
+      <li>
+        <a href="#">Add Video</a>
+      </li>
+      <li>
+        <a href="#">Sign in with Google</a>
+      </li>
+    </ul>
+  </div>
+</div>
