@@ -19,6 +19,9 @@
   text-shadow: 1px 1px 2px #0a0a0a;
 }
 
+/* Phoenix flash messages */
+.callout:empty { display: none; }
+
 .no-js .top-bar {
   display: none;
 }
